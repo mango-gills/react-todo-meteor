@@ -20,21 +20,23 @@ export const App = () => {
   const deleteTask = ({ _id }) => TasksCollection.remove(_id);
 
   return (
-    <div>
-      <h1>Welcome to Meteor!</h1>
+    <div className="App">
+      <h1>Welcome to Meteor Todo App!</h1>
 
-      <TaskForm />
+      <div className="task-container">
+        <TaskForm />
 
-      <ul>
-        {tasks.map((task) => (
-          <Task
-            key={task._id}
-            task={task}
-            onCheckboxClick={toggleChecked}
-            onDeleteClick={deleteTask}
-          />
-        ))}
-      </ul>
+        <ul className="list">
+          {tasks.map((task) => (
+            <Task
+              key={task._id}
+              task={task}
+              onCheckboxClick={toggleChecked}
+              onDeleteClick={deleteTask}
+            />
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
