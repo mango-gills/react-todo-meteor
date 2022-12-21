@@ -35,6 +35,10 @@ body {
   background-color: #3f3f46;
 }
 
+.task-container h3 {
+  color: white;
+}
+
 .task-form {
   width: 100%;
   display: flex;
@@ -75,7 +79,7 @@ body {
   align-items: center;
   margin: 10px 0;
   background: #f3f4f6;
-  padding: 3px 5px;
+  padding: 0 5px;
   border-radius: 5px;
 }
 
@@ -98,4 +102,20 @@ body {
 
 .check-item input {
   margin-right: 5px;
+}
+
+.filter {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.filter button {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 5px 8px;
+  background: #000;
+  border: 1px solid white;
+  border-radius: 3px;
+  cursor: pointer;
 }
