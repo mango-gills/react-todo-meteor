@@ -119,3 +119,45 @@ body {
   border-radius: 3px;
   cursor: pointer;
 }
+
+.login-container {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form {
+  background-color: #a8a29e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  margin: auto;
+}
+
+.login-form div {
+  text-align: left;
+}
+
+.login-form div label {
+  color: white;
+  margin-right: 5px;
+}
+
+.login-form button {
+  margin: 0 auto;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-header .user {
+  color: white;
+  cursor: pointer;
+}
