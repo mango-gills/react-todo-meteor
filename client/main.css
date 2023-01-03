@@ -161,3 +161,18 @@ body {
   color: white;
   cursor: pointer;
 }
+
+.github-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.btn-container {
+  margin: 5px 0;
+}
+
+.btn-login {
+  padding: 5px;
+}
