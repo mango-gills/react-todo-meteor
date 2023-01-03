@@ -1,3 +1,4 @@
+import { Meteor } from "meteor/meteor";
 import React, { Fragment, useState } from "react";
 import { Task } from "./components/Task.jsx";
 import { useTracker } from "meteor/react-meteor-data";
@@ -33,16 +34,19 @@ export const App = () => {
   });
 
   // update task if checked
-  const toggleChecked = ({ _id, isChecked }) => {
-    TasksCollection.update(_id, {
-      $set: {
-        isChecked: !isChecked,
-      },
-    });
-  };
+  const toggleChecked = ({ _id, isChecked }) =>
+    Meteor.call("tasks.setIsChecked", _id, !isChecked);
+  // {
+  //   TasksCollection.update(_id, {
+  //     $set: {
+  //       isChecked: !isChecked,
+  //     },
+  //   });
+  // };
 
   // delete a task
-  const deleteTask = ({ _id }) => TasksCollection.remove(_id);
+  // const deleteTask = ({ _id }) => TasksCollection.remove(_id);
+  const deleteTask = ({ _id }) => Meteor.call("tasks.remove", _id);
 
   // count number of uncompleted/pending tasks
   const pendingTasksCount = useTracker(() => {
